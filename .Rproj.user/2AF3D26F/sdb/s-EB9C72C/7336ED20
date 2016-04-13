@@ -1,0 +1,17 @@
+{
+    "contents" : "# Welcome to ProjectTemplate!\n\nThis file introduces you to ProjectTemplate, but you should eventually replace\nthe contents of this file with an introduction to your project. People who\nwork with your data in the future will thank you for it, including your future\nself.\n\nProjectTemplate is an R package that helps you organize your statistical\nanalysis projects. Since you're reading this file, we'll assume that you've\nalready called `create.project()` to set up this project and all of its\ncontents.\n\nTo load your new project, you'll first need to `setwd()` into the directory\nwhere this README file is located. Then you need to run the following two\nlines of R code:\n\n\tlibrary('ProjectTemplate')\n\tload.project()\n\nAfter you enter the second line of code, you'll see a series of automated\nmessages as ProjectTemplate goes about doing its work. This work involves:\n* Reading in the global configuration file contained in `config`.\n* Loading any R packages you listed in he configuration file.\n* Reading in any datasets stored in `data` or `cache`.\n* Preprocessing your data using the files in the `munge` directory.\n\nOnce that's done, you can execute any code you'd like. For every analysis\nyou create, we'd recommend putting a separate file in the `src` directory.\nIf the files start with the two lines mentioned above:\n\n\tlibrary('ProjectTemplate')\n\tload.project()\n\nYou'll have access to all of your data, already fully preprocessed, and\nall of the libraries you want to use.\n\nFor more details about ProjectTemplate, see http://projecttemplate.net\n",
+    "created" : 1460516187491.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2201261279",
+    "id" : "7336ED20",
+    "lastKnownWriteTime" : 1460516353,
+    "path" : "~/Repositorios/2015/graficas/README",
+    "project_path" : "README",
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "text"
+}
