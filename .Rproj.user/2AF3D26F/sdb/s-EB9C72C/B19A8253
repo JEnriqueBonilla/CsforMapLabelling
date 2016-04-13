@@ -1,0 +1,18 @@
+{
+    "contents" : "##### las funciones estan en la carpeta de lib\n\n#### inicializar parámetros\ncentro <- c(3000,.01,.975,100,9,3,2,.35)\nt <- 209302394\ndata <- Data81.nom\nlabels <- data$nombres\nx <- data$x\ny <- data$y\n\n######################################\n######### algoritmo 1 ################\n######################################\n\nset.seed(t)\ninisol<- sample(1:8,length(x),replace=T)\n\nplot(x,y,col=\"red\",pch=20,cex=1) + title(\"MCS\")\n\nMCSlabel(x, y, labels = labels, cex = 1, method = c(\"CS\" \n), allowSmallOverlap = FALSE, trace = T, doPlot = T, Objective=\"dispersion\", \nNuClusters=centro[5], Taumax=centro[6], Bmax=centro[7], T0=centro[1], TE=centro[2], alpha=centro[3],\nSAmax=centro[4], InitialSol=inisol,Inef=centro[8])\n\n\n######################################\n######### algoritmo 2 ################\n######################################\n\nset.seed(t)\n\nplot(x,y,col=\"red\",pch=20,cex=1) + title(\"Pointlabel (SANN)\")\n\npointlabel2(x, y, labels = labels, cex = 1, method =\"SANN\", \n            allowSmallOverlap = F, trace = T, doPlot = T) \n\n######################################\n######### algoritmo 3 ################\n######################################\n\nset.seed(t)\ninisol<- sample(1:8,length(x),replace=T)\n\nplot(x,y,col=\"red\",pch=20,cex=1) + title(\"CS\")\n\nCSlabel(x, y, labels = labels, cex = 1, method = c(\"CS\" \n), allowSmallOverlap = FALSE, trace = T, doPlot = T, Objective=\"dispersion\", \nNuClusters=centro[5], Taumax=centro[6], Bmax=centro[7], T0=centro[1], TE=centro[2], alpha=centro[3],\nSAmax=centro[4], InitialSol=inisol,Inef=centro[8])\n\n######################################\n######### algoritmo 4 ################\n######################################\n\nset.seed(t)\ninisol<- sample(1:8,length(x),replace=T)\n\nplot(x,y,col=\"red\",pch=20,cex=1) + title(\"CS con LS2\")\n\nCSlabells2(x, y, labels = labels, cex = 1, method = c(\"CS\" \n), allowSmallOverlap = FALSE, trace = T, doPlot = T, Objective=\"dispersion\", \nNuClusters=centro[5], Taumax=centro[6], Bmax=centro[7], T0=centro[1], TE=centro[2], alpha=centro[3],\nSAmax=centro[4], InitialSol=inisol,Inef=centro[8])\n\n\n",
+    "created" : 1460512040418.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4266956519",
+    "id" : "B19A8253",
+    "lastKnownWriteTime" : 1444266013,
+    "path" : "~/Repositorios/2015/graficas/src/02_genera_plots.R",
+    "project_path" : "src/02_genera_plots.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

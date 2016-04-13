@@ -1,0 +1,18 @@
+{
+    "contents" : "# paquete utilizado \nrequire(randomNames)\n\n### instalación \n# install.packages(\"devtools\")\n# require(devtools)\n# install_github(\"CenterForAssessment/randomNames\")\n# require(randomNames)\n\n### variables para este paquete\n# gender 1 = female 0 = male\n# ethnicity 1:5 american india, asian, african, hispanic, white (non hispacic)\n\n### nombres femeninos\n\nset.seed(923023)\n\ntest.df = data.frame(genero = rep(1, 100)) \n\nnombres <- randomNames(n = 100, gender = test.df$genero , which.names = \"first\" )\n\ndato <- data.frame( Labels = paste(\"etiqueta\", 1:100, sep =\"\"), nombres = nombres)\n\nDataL100.nom <- DataL100 %>%\n  left_join(dato)\n\n\n### nombres masculinos\n\nset.seed(923023)\n\ntest.df = data.frame(genero = rep(0, 100)) \n\nnombres <- randomNames(n = 100, gender = test.df$genero , which.names = \"first\" )\n\ndato <- data.frame( Labels = paste(\"etiqueta\", 1:100, sep =\"\"), nombres = nombres)\n\nData100.nom <- Data100 %>%\n  left_join(dato)\n\n### nombres con apellido\n\nset.seed(923023)\n\ntest.df = data.frame(genero = sample(c(0,1), 75, replace= T)) \n\nnombres <- randomNames(n = 75, gender = test.df$genero , which.names = \"both\", name.sep= \", \" )\n\ndato <- data.frame( Labels = paste(\"etiqueta\", 1:75, sep =\"\"), nombres = nombres)\n\nDataL75.nom <- DataL75 %>%\n  left_join(dato)\n\n### nombres con apellido, nueva base\n\nset.seed(923023)\n\nnombres <- randomNames(n = 71, which.names = \"last\")\n\n\nx1 <- seq(-4, 4, .2)\ny1 <- x1*(x1-4)*(x1+4)\n\nx2 <- rep(-2,15) + runif(15, -.5, .5)\ny2 <- rep(-10,15) + runif(15, -3, 3)\n\nx3 <- rep(2,15) + runif(15, -.5, .5)\ny3 <- rep(10,15) + runif(15, -3, 3)\n\nData81.nom  <- data.frame(x = c(x1,x2,x3), y =c(y1,y2, y3), nombres )\n\n\n",
+    "created" : 1444260539168.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3913707143",
+    "id" : "A2A5E196",
+    "lastKnownWriteTime" : 1444181639,
+    "path" : "~/Repositorios/2015/graficas/munge/00_genera_datos.R",
+    "project_path" : "munge/00_genera_datos.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 0,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
